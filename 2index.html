@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DEVinKnowledge</title>
+  <link rel="shortcut icon" href="image/2icon_projeto1.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+
+  <section class="displayGrid">
+    <aside>
+      <header id="cabecalho">
+        <h1 id="tituloCabecalho">DEVinKnowledge</h1>
+        <p>Learn, Code and Save </p>
+      </header>
+
+
+      <section>
+        <form name="formulario" id="formulario">
+          <label for="titulo">Título</label>
+          <input type="text" name="titulo" id="titulo" onkeypress="return event.keyCode != 13;"
+            placeholder="Digite um título" minlength="8" maxlength="64" required>
+          <label for="linguagem">Linguagem/Skill</label>
+          <input type="text" name="linguagem" id="linguagem" onkeypress="return event.keyCode != 13;"
+            placeholder="Digite uma linguagem ou Skill" minlength="8" maxlength="32" required>
+          <label for="categoria">Categoria</label>
+          <select name="categoria" id="categoria">
+            <option value="FrontEnd">FrontEnd</option>
+            <option value="BackEnd">BackEnd</option>
+            <option value="FullStack">FullStack</option>
+            <option value="SoftSkill">Comportamental/SoftSkill</option>
+          </select>
+          <label for="descricao">Descrição</label>
+          <textarea name="descricao" id="descricao" placeholder="Escreva aqui sua dica" minlength="16" maxlength="1024"
+            required></textarea>
+          <label for="videoYoutube">Vídeo do YouTube*</label>
+          <input type="url" name="videoYoutube" id="videoYoutube" placeholder="https://suaurl.com"
+            onkeypress="return event.keyCode != 13;">
+          <div class="botoesForm">
+            <input id="botaoSalvar" type="submit" name="botaoSalvar" value="Salvar">
+            <input id="botaoLimpar" type="reset" name="botaoLimpar" value="Limpar">
+          </div>
+        </form>
+        <button id="botaoAtualizar" class="apagaBotao">Atualizar</button>
+      </section>
+    </aside>
+
+
+    <div>
+      <section class="cardsContadores">
+        <div class="estatistica">
+          <h3>Total</h3>
+          <p id="cardTotal">0</p>
+        </div>
+        <div class="estatistica">
+          <h3>FrontEnd</h3>
+          <p id="cardFrontEnd">0</p>
+        </div>
+        <div class="estatistica">
+          <h3>BackEnd</h3>
+          <p id="cardBackEnd">0</p>
+        </div>
+        <div class="estatistica">
+          <h3>FullStack</h3>
+          <p id="cardFullStack">0</p>
+        </div>
+        <div class="estatistica">
+          <h3>SoftSkill</h3>
+          <p id="cardSoftSkill">0</p>
+        </div>
+      </section>
+
+      <div class="secaoBusca">
+        <form name="formularioBusca" id="formularioBusca">
+          <input type="text" name="buscador" id="buscador" onkeypress="return event.keyCode != 13;"
+            placeholder="Buscar título...">
+          <div class="botoesBusca">
+            <button id="buscarTitulo"><img style="width: 20px;" src="/image/lupa_buscador.ico"></button>
+            <button id="apagarBusca">X</button>
+          </div>
+        </form>
+      </div>
+
+      <main>
+        <ul id="ul">
+        </ul>
+      </main>
+
+    </div>
+
+  </section>
+
+
+
+
+  <script type="module" src="./script/script.js"></script>
+</body>
+
+</html>
